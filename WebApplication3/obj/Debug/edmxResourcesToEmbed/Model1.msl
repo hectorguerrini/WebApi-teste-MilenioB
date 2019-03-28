@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="milenioBusModelStoreContainer" CdmEntityContainer="milenioBusEntities">
+    <EntitySetMapping Name="MB_CLIENTE">
+      <EntityTypeMapping TypeName="milenioBusModel.MB_CLIENTE">
+        <MappingFragment StoreEntitySet="MB_CLIENTE">
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="endereco" ColumnName="endereco" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="complemento" ColumnName="complemento" />
+          <ScalarProperty Name="bairro" ColumnName="bairro" />
+          <ScalarProperty Name="id_cidade" ColumnName="id_cidade" />
+          <ScalarProperty Name="cep" ColumnName="cep" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

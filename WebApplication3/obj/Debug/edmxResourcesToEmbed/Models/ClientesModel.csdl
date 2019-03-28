@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="milenioBusModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MB_CLIENTE">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="endereco" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="numero" Type="Int32" />
+    <Property Name="complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_cidade" Type="Int32" />
+    <Property Name="cep" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MB_COMBO_CIDADE">
+    <Key>
+      <PropertyRef Name="id_cidade" />
+    </Key>
+    <Property Name="id_cidade" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cidade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="milenioBusEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MB_CLIENTE" EntityType="Self.MB_CLIENTE" />
+    <EntitySet Name="MB_COMBO_CIDADE" EntityType="Self.MB_COMBO_CIDADE" />
+  </EntityContainer>
+</Schema>
